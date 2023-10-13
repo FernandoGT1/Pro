@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
+
+
+
+
+
 function CondicionAtmosferica() {
-  const url = "https://api.datos.gob.mx/v1/condiciones-atmosfericas";
+  const url = "https://api.datos.gob.mx/v1/condiciones-atmosfericas?pageSize=800";
   const [datos, setDatos] = useState([]);
   const [estadoActual, setEstadoActual] = useState("");
   const [ciudadesDelEstado, setCiudadesDelEstado] = useState([]);
   const [cargando, setCargando] = useState(true);
+
 
   useEffect(() => {
     fetch(url)
@@ -38,19 +44,19 @@ function CondicionAtmosferica() {
   const estadosMx = [
     
     
-    "Michoacán",
+    "Michoacan",
     "Morelos",
     "Nayarit",
-    "Nuevo León",
+    "Nuevo Leon",
     "Oaxaca",
     "Puebla",
-    "Querétaro",
+    "Queretaro",
     "Quintana Roo",
-    "San Luis Potosí",
+    "San Luis Potosi",
     "Sinaloa",
     "Sonora",
     "Tabasco",
-    "Estado de México",
+    "Estado de Mexico",
     "Guanajuato",
     "Guerrero",
     "Hidalgo",
@@ -62,6 +68,8 @@ function CondicionAtmosferica() {
     "Zacatecas"
     
   ];
+
+
 
   return (
     <div className="container mt-5">
@@ -100,7 +108,7 @@ function CondicionAtmosferica() {
                         </div>
                       ))
                     ) : (
-                      <p>No hay datos disponibles para este estado.</p>
+                      <p>No hay datos disponibles para este estado, intenta con otro.</p>
                     )}
                   </div>
                 </>

@@ -1,14 +1,25 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import CondicionAtmosferica from './components/Dashboard';
+import './App.css';
+import Tours from './Paginas/Tours';
+import Login from './components/Login';
+import CocktaiRandom from './components/CocktaiRandom';
+
 
 function App() {
   return (
-    <div className="App bg-light text-center py-5">
-      <h1 className="text-danger">EL CLIMA EN TUS MANOS</h1>
-      <CondicionAtmosferica />
-      <h4 className="text-danger">@GUSTAVO-Gutierrez</h4>
-    </div>
+    <>
+    
+    
+      {/* <Navbar/> */}
+      {/* <CondicionAtmosferica /> */}
+      <Tours></Tours> 
+
+      {/* <CocktaiRandom >  
+        
+      </CocktaiRandom> */}
+      
+    
+      
+    </>
   );
 }
 
